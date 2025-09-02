@@ -160,16 +160,26 @@ export default function LazyImage({
   }
 
   return (
-    <>
+    // 使用一个 div 容器包裹图片和下载按钮
+    <div className='image-with-download-container'>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img {...imgProps} />
+      {/* 添加下载按钮 */}
+      <a
+        href={src} // 使用原始的 src 变量作为下载链接
+        download
+        className='image-download-button'
+        title='下载图片'
+      >
+        下载图片
+      </a>
       {/* 预加载 */}
       {priority && (
         <Head>
           <link rel='preload' as='image' href={adjustImgSize(src, maxWidth)} />
         </Head>
       )}
-    </>
+    </div>
   )
 }
 
