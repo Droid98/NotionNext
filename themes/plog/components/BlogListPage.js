@@ -47,10 +47,11 @@ export const BlogListPage = props => {
     }
   }, [])
   return (
-    <div className='w-full px-4 sm:px-6'> {/* 添加左右内边距 */}
+    // 关键修改：在这里添加 mt-8 (margin-top: 2rem)
+    <div className='w-full px-4 sm:px-6 mt-8'>
       <div
         id='posts-wrapper'
-        className='grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4'> {/* 确保这里有 gap-4 类 */}
+        className='grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4'>
         {posts?.map((post, index) => (
           <BlogPost
             index={index}
