@@ -34,22 +34,16 @@ const BlogPost = (props) => {
             data-aos-duration="500"
             data-aos-once="true"
             data-aos-anchor-placement="top-bottom"
-            key={post?.id} className='cursor-pointer relative'>
-
+            key={post?.id} className='plog-card-item cursor-pointer relative'>
             <LazyImage src={pageThumbnail} className='aspect-[16/9] w-full h-full object-cover filter contrast-120' />
 
             <h2 className="text-md absolute left-0 bottom-0 m-4 text-gray-100 shadow-text">
                 {siteConfig('POST_TITLE_ICON') && <NotionIcon icon={post.pageIcon} />} {post?.title}
             </h2>
-            {post?.category && <div className='text-xs rounded-lg absolute left-0 top-0 m-4 px-2 py-1 bg-gray-200 dark:bg-black dark:bg-opacity-25 hover:bg-blue-700 hover:text-white duration-200'>
-                <SmartLink href={`/category/${post?.category}`}>
+            {post?.category && <div className='text-xs rounded-lg absolute left-0 top-0 m-4 px-2 py-1 bg-gray-200 dark:bg-black dark:text-gray-400 opacity-60'>
                 {post?.category}
-                </SmartLink>
             </div>}
-
         </article>
-
   )
 }
-
 export default BlogPost
