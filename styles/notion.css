@@ -2087,3 +2087,37 @@ figure.notion-asset-wrapper.notion-asset-wrapper-video > div {
 .notion-gallery {
   padding: 0 16px;
 }
+
+/* 图片和按钮的容器 */
+.image-with-download-container {
+  position: relative; /* 关键：为内部的绝对定位元素提供参考 */
+  display: inline-block; /* 让容器宽度与图片一致 */
+  overflow: hidden; /* 确保悬浮效果不超出图片范围 */
+}
+
+/* 下载按钮的样式 */
+.image-download-button {
+  position: absolute; /* 绝对定位，覆盖在图片上 */
+  bottom: 10px; /* 距离底部 10px */
+  right: 10px; /* 距离右侧 10px */
+  background-color: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+  color: white; /* 按钮图标颜色 */
+  padding: 8px; /* 增加内边距，让按钮更大 */
+  border-radius: 50%; /* 圆形按钮 */
+  display: flex; /* 使用 flex 布局居中图标 */
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 移除下划线 */
+  transition: all 0.3s ease; /* 平滑过渡效果 */
+  opacity: 0; /* 默认隐藏 */
+  pointer-events: none; /* 默认不响应鼠标事件 */
+  transform: translateY(10px); /* 默认稍向下偏移 */
+}
+
+/* 鼠标悬停在整个容器上时，下载按钮显示并向上浮动 */
+.image-with-download-container:hover .image-download-button {
+  opacity: 1; /* 悬停时显示 */
+  pointer-events: auto; /* 悬停时响应鼠标事件 */
+  transform: translateY(0); /* 恢复到正常位置 */
+  background-color: rgba(0, 0, 0, 0.8); /* 悬停时背景更深 */
+}
