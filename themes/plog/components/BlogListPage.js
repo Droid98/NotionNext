@@ -18,8 +18,8 @@ export const BlogListPage = props => {
   const showNext = page < totalPage
   const pagePrefix = router.asPath
     .split('?')[0]
-    .replace(/\/page\/[1-9]\d*/, '')
-    .replace(/\/$/, '')
+    .replace(/\/\page\/[1-9]\d*/, '')
+    .replace(/\//, '')
     .replace('.html', '')
 
   const blogPostRefs = useRef([])
@@ -47,10 +47,10 @@ export const BlogListPage = props => {
     }
   }, [])
   return (
-    <div className='w-full'>
+    <div className='w-full px-4 sm:px-6'> {/* 添加左右内边距 */}
       <div
         id='posts-wrapper'
-        className='grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2'>
+        className='grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4'> {/* 确保这里有 gap-4 类 */}
         {posts?.map((post, index) => (
           <BlogPost
             index={index}
