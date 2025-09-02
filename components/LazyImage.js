@@ -164,7 +164,7 @@ export default function LazyImage({
     <div className='image-with-download-container'>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img {...imgProps} />
-      {/* 添加下载按钮，包含图标和文字 */}
+      {/* 添加下载按钮，使用SVG图标 */}
       <a
         href={src} // 使用原始的 src 变量作为下载链接
         download
@@ -175,7 +175,7 @@ export default function LazyImage({
             <path clipRule="evenodd" fillRule="evenodd" d="M10 12.5a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0v-2.5a.75.75 0 01.75-.75z"></path>
             <path d="M.44 8.046A.75.75 0 011 7.5h18a.75.75 0 01.56 1.046l-8.75 7.5a.75.75 0 01-1.12 0l-8.75-7.5zM12.5 12a.5.5 0 10-1 0v2.25a.5.5 0 101 0V12z"></path>
         </svg>
-        <span>下载</span> {/* 添加下载文字 */}
+        <span>下载</span>
       </a>
       {/* 预加载 */}
       {priority && (
