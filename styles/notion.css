@@ -2101,17 +2101,29 @@ figure.notion-asset-wrapper.notion-asset-wrapper-video > div {
   bottom: 10px; /* 距离底部 10px */
   right: 10px; /* 距离右侧 10px */
   background-color: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
-  color: white; /* 按钮图标颜色 */
-  padding: 8px; /* 增加内边距，让按钮更大 */
-  border-radius: 50%; /* 圆形按钮 */
-  display: flex; /* 使用 flex 布局居中图标 */
-  justify-content: center;
-  align-items: center;
+  color: white; /* 按钮图标和文字颜色 */
+  padding: 8px 12px; /* 调整内边距，左右更多 */
+  border-radius: 9999px; /* 很大的圆角，形成胶囊状 */
+  display: flex; /* 使用 flex 布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 4px; /* 图标和文字之间的间距 */
   text-decoration: none; /* 移除下划线 */
+  font-size: 14px; /* 文字大小 */
+  line-height: 1; /* 行高，确保垂直对齐 */
   transition: all 0.3s ease; /* 平滑过渡效果 */
   opacity: 0; /* 默认隐藏 */
   pointer-events: none; /* 默认不响应鼠标事件 */
   transform: translateY(10px); /* 默认稍向下偏移 */
+  cursor: pointer; /* 鼠标指针样式 */
+  -webkit-backdrop-filter: blur(8px); /* 磨砂玻璃效果（Safari） */
+  backdrop-filter: blur(8px); /* 磨砂玻璃效果（其他浏览器） */
+}
+
+/* 按钮内部的 SVG 图标样式 */
+.image-download-button svg {
+    width: 1em; /* 让 SVG 宽度与当前字体大小一致 */
+    height: 1em; /* 让 SVG 高度与当前字体大小一致 */
+    margin-bottom: -1px; /* 微调图标与文字的垂直对齐 */
 }
 
 /* 鼠标悬停在整个容器上时，下载按钮显示并向上浮动 */
