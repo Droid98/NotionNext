@@ -47,8 +47,8 @@ export const BlogListPage = props => {
     }
   }, [])
   return (
-    // 关键修改：在这里添加 mt-8 (margin-top: 1rem)
-    <div className='w-full px-4 sm:px-6 mt-8'>
+    // 在这里添加顶部内边距 pt-4
+    <div className='w-full px-4 sm:px-6 pt-4'>
       <div
         id='posts-wrapper'
         className='grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4'>
