@@ -59,7 +59,7 @@ export default function SlideOvers({ children, cRef }) {
                                         <div className="relative mt-auto">
                                             <div className='relative overflow-hidden z-10 p-4'>
                                                 <h2 className='text-3xl font-light text-gray-200'>联系站长</h2>
-                                                <p className='text-gray-400 mt-2'>邮箱：{siteConfig('CONTACT_EMAIL')}</p>
+                                                <p className='text-gray-400 mt-2'>邮箱：droid1998a@gmail.com{siteConfig('CONTACT_EMAIL')}</p>
                                                 <div className='mt-4'>
                                                     <SocialButton/>
                                                 </div>
