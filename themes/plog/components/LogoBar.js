@@ -23,13 +23,13 @@ export default function LogoBar(props) {
     {navBarTitle
       ? (
             <SmartLink href="/" aria-label={siteConfig('title')}>
-                <p className="ml-2 font-medium text-gray-800 dark:text-gray-300 header-name">
+                <p className="ml-2 font-bold text-[#ffb7c5] dark:text-[#ffb7c5] header-name">
                     {navBarTitle}
                 </p>
             </SmartLink>
         )
       : (
-            <p className="ml-2 font-medium text-gray-800 dark:text-gray-300 header-name">
+            <p className="ml-2 font-bold text-[#ffb7c5] dark:text-[#ffb7c5] header-name">
                 <SmartLink href="/" aria-label={siteConfig('TITLE')}> {siteConfig('TITLE')}</SmartLink>
                 {' '}<span className="font-normal text-sm text-gray-00 dark:text-gray-400">{siteConfig('DESCRIPTION')}</span>
             </p>
