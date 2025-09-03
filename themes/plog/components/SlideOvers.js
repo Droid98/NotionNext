@@ -2,7 +2,7 @@ import { Fragment, useRef, useImperativeHandle, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import SocialButton from './SocialButton'
 import { siteConfig } from '@/lib/config'
-import Footer from '@/components/Footer' // <-- 注意这里导入了新的 Footer
+import Footer from './Footer' // <-- 修改了这里，使用相对路径
 
 /**
  * 侧拉抽屉
