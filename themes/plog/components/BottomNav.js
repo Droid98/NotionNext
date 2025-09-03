@@ -94,9 +94,6 @@ const MenuList = props => {
         <li className='my-auto px-2'>
           <FullScreenButton />
         </li>
-        <li className='my-auto px-2'>
-          <InformationButton />
-        </li>
       </ul>
     </div>
   )
